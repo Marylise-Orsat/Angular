@@ -1,27 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import {MenuItem} from 'primeng/api';
+
 
 @Component({
+  styleUrls: ['./navigation.component.css'],
   selector: 'app-navigation',
-  templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.css']
+  templateUrl: './navigation.component.html'
 })
-export class NavigationComponent implements OnInit {
 
-  // on type pour faire une liste
-  items: MenuItem[] = [];
+export class NavigationComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit(): void {
-    this.items = [
-      {
-        label: 'joli'
-      },
-      {
-        label: 'menu2'
-      }
-    ]
   }
-
 }
+
+
+
