@@ -6,20 +6,12 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://unpkg.com/tailwindcss@1.4.6/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
-  <div class="p-d-flex"></div><app-header></app-header>
-    <p-splitter [style]="{'height': '300px'}">
-      <ng-template pTemplate>
-        <app-navigation></app-navigation>
-      </ng-template>
-      <ng-template pTemplate>
-        <app-content></app-content>
-      </ng-template>
-    </p-splitter>
-    <div>
-      <app-footer></app-footer>
-    </div>
-  </div>
+  </div><app-header></app-header>
+  <app-navigation></app-navigation>
+  <app-content></app-content>
+  <app-footer></app-footer>
 </body>
 </html>

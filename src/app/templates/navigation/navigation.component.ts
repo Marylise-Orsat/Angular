@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Navigation } from './models/navigation';
 
 
 @Component({
@@ -9,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 
 export class NavigationComponent implements OnInit {
 
+  menus: Navigation[] = [];
+
   constructor() { }
 
   ngOnInit(): void {
+    this.menus = [
+      {
+        label: 'Menu 1'
+      },
+      {
+        label: 'Menu 2'
+      },
+      {
+        label: 'Menu 3'
+      }
+    ]
   }
 }
 
