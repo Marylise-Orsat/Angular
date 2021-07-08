@@ -1,4 +1,5 @@
-import { MessagesListComponent } from './../messaging/messages-list/messages-list.component';
+import { MessagingModule } from './../messaging/messaging.module';
+import { AppRoutingModule } from './../app-routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
@@ -14,11 +15,12 @@ import { NavigationComponent } from './navigation/navigation.component';
     NavigationComponent,
     FooterComponent,
     ContentComponent,
-    MessagesListComponent
   ],
   imports: [
     CommonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    MessagingModule
   ]
 })
 export class TemplatesModule { }

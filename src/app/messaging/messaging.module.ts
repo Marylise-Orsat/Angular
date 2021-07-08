@@ -1,17 +1,20 @@
+import { MessagesListComponent } from './messages-list/messages-list.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NotifsComponent } from './notifs/notifs.component';
-import { MessagesListComponent } from './messages-list/messages-list.component';
 import { MessagesWritingComponent } from './messages-writing/messages-writing.component';
-import { NbCardModule } from '@nebular/theme';
+import { NbButtonModule, NbCardModule, NbInputModule } from '@nebular/theme';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [ ],
+  declarations: [MessagesWritingComponent, MessagesListComponent],
   imports: [
     CommonModule,
+    FormsModule,
+    NbInputModule,
+    NbButtonModule,
     NbCardModule
   ],
-  exports: [ ]
+  exports: [MessagesWritingComponent, MessagesListComponent]
 })
 export class MessagingModule { }

@@ -1,5 +1,5 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavigationComponent } from './templates/navigation/navigation.component';
-import { NbSidebarModule, NbThemeModule } from '@nebular/theme';
 import { FooterComponent } from './templates/footer/footer.component';
 import { HeaderComponent } from './templates/header/header.component';
 import { ContentComponent } from './templates/content/content.component';
@@ -13,6 +13,7 @@ import { BrowserModule } from '@angular/platform-browser';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     TemplatesModule
   ],
   providers: [],

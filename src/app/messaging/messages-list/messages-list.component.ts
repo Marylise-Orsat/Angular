@@ -1,3 +1,4 @@
+import { MessagesService } from './../services/messages.service';
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { Message } from '../models/message';
 
@@ -14,10 +15,13 @@ export class MessagesListComponent implements OnInit {
   @Input() count: number = 0;
 
 
-  constructor() { }
+  constructor(private messageService: MessagesService,
+
+
+    ) { }
 
   ngOnInit(): void {
-
+    this.messageService.getAll();
     //gestion du nombre de messages
     this.messages = this.messages.splice(0, this.count);
 
