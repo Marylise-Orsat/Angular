@@ -1,3 +1,4 @@
+import { MessagesService } from './../services/messages.service';
 import { Component, OnInit } from '@angular/core';
 import { Message } from '../models/message';
 
@@ -10,7 +11,7 @@ import { Message } from '../models/message';
 export class MessagesWritingComponent implements OnInit {
 
   // on initialise un objet mess (et non une liste) avec des clés/valeurs
-  mess: Message = {
+  message: Message = {
     id: 1,
     from: "Mme Bean",
     to: "Mr Bean",
@@ -19,18 +20,18 @@ export class MessagesWritingComponent implements OnInit {
     read: false
   };
 
-  constructor() { }
+  constructor(private service: MessagesService) { }
 
   ngOnInit(): void {
 
   }
 
   send() {
-    console.log(this.mess);
-  }
+    this.service.create(this.message);
+    }
 
   clear() {
-    this.mess = {};
+    this.message = {};
   }
 
 }

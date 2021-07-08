@@ -15,15 +15,14 @@ export class MessagesListComponent implements OnInit {
   @Input() count: number = 0;
 
 
-  constructor(private messageService: MessagesService,
-
+  constructor(private messageService: MessagesService
 
     ) { }
 
+
   ngOnInit(): void {
-    this.messageService.getAll();
-    //gestion du nombre de messages
-    this.messages = this.messages.splice(0, this.count);
+    // this.messageService.getAll() retourne une liste de messages
+    this.messages = this.messageService.getAll();
 
   }
 
