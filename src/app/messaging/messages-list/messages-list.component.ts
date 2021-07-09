@@ -15,15 +15,19 @@ export class MessagesListComponent implements OnInit {
   @Input() count: number = 0;
 
 
-  constructor(private messageService: MessagesService
-
-    ) { }
+  constructor(
+    private messageService: MessagesService
+  ) { }
 
 
   ngOnInit(): void {
     // this.messageService.getAll() retourne une liste de messages
-    this.messages = this.messageService.getAll();
-
+    this.messageService.getAll()
+    .then(ms=>{
+      this.messages = ms
+    })
+    // dans le cas où ça s'est mal passé, on met en console l'erreur
+    .catch(reason=> console.log(reason))
   }
 
   // méthode qui récupère l'évenement du click sur le checkbox du read

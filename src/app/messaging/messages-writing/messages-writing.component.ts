@@ -28,7 +28,7 @@ export class MessagesWritingComponent implements OnInit {
 
   send() {
     this.service.create(this.message);
-    }
+  }
 
   clear() {
     this.message = {};

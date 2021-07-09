@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { MessagesWritingComponent } from './messages-writing/messages-writing.component';
 import { NbButtonModule, NbCardModule, NbInputModule } from '@nebular/theme';
 import { FormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [MessagesWritingComponent, MessagesListComponent],
@@ -13,7 +13,8 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     NbInputModule,
     NbButtonModule,
-    NbCardModule
+    NbCardModule,
+    HttpClientModule
   ],
   exports: [MessagesWritingComponent, MessagesListComponent]
 })
