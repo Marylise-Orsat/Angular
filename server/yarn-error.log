@@ -1,0 +1,57 @@
+Arguments: 
+  /usr/local/bin/node /opt/yarn-v1.22.5/bin/yarn.js add --dev babel-jest @babel/core @babel/preset-env
+
+PATH: 
+  /root/.vscode-server/bin/2aeda6b18e13c4f4f9edf6667158a6b8d408874b/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  14.17.3
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: getaddrinfo EAI_AGAIN registry.yarnpkg.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:69:26)
+
+npm manifest: 
+  {
+    "name": "express",
+    "version": "1.0.0",
+    "main": "index.js",
+    "dependencies": {
+      "cors": "^2.8.5",
+      "express": "^4.17.1"
+    },
+    "devDependencies": {
+      "babel-cli": "^6.26.0",
+      "babel-preset-env": "^1.7.0",
+      "jest": "^27.0.6",
+      "superagent": "^6.1.0",
+      "supertest": "^6.1.3"
+    },
+    "scripts": {
+      "test": "jest",
+      "start": "node index.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://gitlab.com/Marylise-Orsat/backangular.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://gitlab.com/Marylise-Orsat/backangular/issues"
+    },
+    "homepage": "https://gitlab.com/Marylise-Orsat/backangular#readme",
+    "description": ""
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
