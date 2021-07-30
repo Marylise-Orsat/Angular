@@ -19,15 +19,28 @@ export class MessagesListComponent implements OnInit {
     private messageService: MessagesService
   ) { }
 
+  ngOnDestroy(): void {
+    //Called once, before the instance is destroyed.
+    //Add 'implements OnDestroy' to the class.
+    this.messageService
+      .subject.unsubscribe();
+  }
+
 
   ngOnInit(): void {
-    // this.messageService.getAll() retourne une liste de messages
-    this.messageService.getAll()
-    .then(ms=>{
-      this.messages = ms
-    })
-    // dans le cas où ça s'est mal passé, on met en console l'erreur
-    .catch(reason=> console.log(reason))
+    // retourne une liste de messages
+    // this.messageService.getAll()
+    // .then(ms=>{
+    //   this.messages = ms
+    // })
+    // dans le cas où ça s'est mal passé -> catch
+    // .catch(reason=> console.log(reason))
+    this.messageService
+      .subject
+      .subscribe(messages => {
+        this.messages = messages
+      })
+    this.messageService.reloadDatas();
   }
 
   // méthode qui récupère l'évenement du click sur le checkbox du read
@@ -37,7 +50,7 @@ export class MessagesListComponent implements OnInit {
     // Va tester chaque message de la méthode filtrer
     // renvoie l'élément si la condition est vérifiée : si l'input est coché
     // et renvoie la liste des messages lus
-    this.messages.filter( message => message.read === input.checked);
+    this.messages.filter( messages => messages.read === input.checked);
     console.log(event);
   }
 
